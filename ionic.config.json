@@ -1,0 +1,7 @@
+{
+  "name": "Numerology",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Numerology
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <!-- <div class=""><p>Date of Birth :<input type="date" name="dob" id="dob" [ngModel] ="dt | date:'yyyy-MM-dd'" (ngModelChange)="handler($event)" /></p></div> -->
+<ion-content>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h1 class="mt-5">Welcome to Numerology software</h1>
+        <p class="lead">Please select your birth day to generate the chart!</p>
+
+        <section class="card">
+        <div class="row" style="padding:10px;">
+        <div class="col-6" style="font-size: 25px;">
+        <p> DOB Person 1:<input type="date" name="dob1" id="dob1" [(ngModel)]="dt1" (ngModelChange)="handler($event)" style="width: 115%;"/>  </p> 
+        <ul class="list-unstyled first">
+          <li class='a' id='a' ></li>
+          <li class='b' id='b' ></li>
+          <li class='c' id='c' ></li>
+          <li class='d' id='d' ></li>
+          <li class='e' id='e' ></li>
+          <li class='f' id='f' ></li>
+          <li class='g' id='g' ></li>
+          <li class='h' id='h' ></li>
+        </ul>
+        </div>
+        <div class="col-6" style="font-size: 25px;">
+        <p> DOB Person 2:<input type="date" name="dob2" id="dob2" [(ngModel)]="dt2" (ngModelChange)="handler_dob2($event)" style="width: 115%;" /> </p> 
+            <ul class="list-unstyled second">
+              <li class='a' id='a' ></li>
+              <li class='b' id='b' ></li>
+              <li class='c' id='c' ></li>
+              <li class='d' id='d' ></li>
+              <li class='e' id='e' ></li>
+              <li class='f' id='f' ></li>
+              <li class='g' id='g' ></li>
+              <li class='h' id='h' ></li>
+            </ul>
+        </div>
+        </div>
+      </section>
+
+        <section id="32table" class="card" style="display: none">
+            <h3>32 Aspect chart</h3>
+          <div class="table-responsive"></div>
+        </section>
+
+        <section id="hchart" class="card" style="display: none">
+          <h3>Health Chart</h3>
+          <div class="table-responsive"></div>
+        </section>
+
+        <section id="dchart" class="card" style="display: none">
+            <h3>Direction Chart</h3>
+            <div class="table-responsive"></div>
+        </section>
+
+        <section id="pchart" class="card" style="display: none">
+            <h3>Personal Life</h3>
+            <div class="table-responsive"></div>
+        </section>
+
+        <section id="exchart" class="card" style="display: none">
+            <h3>Missing or Excessive Codes</h3>
+            <div class="table-responsive"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</ion-content>
