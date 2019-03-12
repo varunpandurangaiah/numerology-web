@@ -62,6 +62,7 @@ function handler_dob2(){
   dob3[0] = (dob3[0].toString().length == 1) ? '0'+dob3[0] : dob3[0];
   triangle('match',[ dob3[0], dob3[1], dob3[2], dob3[3]]);
   $('.second').show();
+
 }
 
 
@@ -129,6 +130,9 @@ async function triangle(type, dob) {
         $('.second #g').html(g.join('&nbsp'));
         $('.second #h').html(h);
     }
+     $("#step1").css("display","block")
+   
+
 }
 
 async function calc(dob) {
@@ -176,6 +180,33 @@ async function calc(dob) {
     $('#hchart').show();
     $('#hchart div').html(hchart);
 
+    //Health Chart Table
+    var ele1 = { 1: 'Heart Bypass', 2:'Heart Attack', 3:'Cancer', 4:'Others'};
+    var ele3 = { 1: 'yes/no', 2:'yes/no', 3:'', 4:''};
+    var hchart1 = '<table class="table">';
+
+     for(var k=1; k <= 4; k++) {
+        hchart1 += "<tr class='"+k+" col'><td class=''>"+ele1[k]+"</td><td class=''>"+ele3[k]+"</td></tr>";
+    }
+    hchart1 += '</table>';
+    $('#hchart1').show();
+    $('#hremark').show();
+    $('#hchart1 div').html(hchart1);
+    //Health Chart Table
+
+    //Star Knowledge
+    var ele2 = { 1: '1st Choice', 2:'2nd Choice', 3:'3rd Choice', 4:'4th Choice', 5:'5th Choice'};
+    var schart = '<table class="table">';
+
+     for(var i=1; i <= 5; i++) {
+        schart += "<tr class='"+i+" col'><td class=''>"+ele2[i]+"</td><td class=''></td></tr>";
+    }
+    schart += '</table>';
+    $('#schartpic').show();
+    $('#schart').show();
+    $('#schart div').html(schart);
+    //Star Knowledge
+
     var directchart = {'L + M + P':gSD(+b[0] + +b[1] + +c[0]),
                        'M + N': gSD(gSD(+b[1] + +b[2]) * 2 ),
                        'N + O + Q': gSD(+b[2] + +b[3] + +c[1]),
@@ -206,6 +237,7 @@ async function calc(dob) {
     dchart += '</table>';
 
     $('#dchart').show();
+    $('#dremark').show();
     $('#dchart div').html(dchart);
 
     var pl1 = pl2 = pl3 = [],
@@ -229,6 +261,7 @@ async function calc(dob) {
               "</ul>";
 
     $('#pchart').show();
+    $('#premark').show();
     $('#pchart div').html(pchart);
 
     var excessive = [b[0], b[1], b[2], b[3], c[0], c[1], d[2], directchart['M + N'], directchart['L + O + R'], directchart['L + M + P'], directchart['N + O + Q'], directchart['P + Q + R']];
@@ -253,10 +286,30 @@ async function calc(dob) {
         exchart += "<tr class='"+k+" col'><td class=''>"+k+"</td><td class=''>"+val+"</td></tr>";
     }
     exchart += '</table>';
+ $('#exchart').show();
+  $('#exchart div').html(exchart);
 
-    $('#exchart').show();
-    $('#exchart div').html(exchart);
+      // Life Code Number
+    var exchart1 = '<table class="table">';
+    exchart1 += "<table class='table'><tr><th>Life Code Number</th></tr>";
+    exchart1 += "<tr class='col'><td class=''></td></tr>";
+exchart1 += '</table>';
+   
+    $('#exchart1').show();
+   $('#exchart1 div').html(exchart1);
 
+    // Life Code Number
+
+    // Hidden Number
+  var exchart2 = '<table class="table">';
+    exchart2 += "<table class='table'><tr><th>Hidden Number</th></tr>";
+    exchart2 += "<tr class='col'><td class=''></td></tr>";
+exchart2 += '</table>';
+   
+    $('#exchart2').show();
+   $('#exchart2 div').html(exchart2);
+
+      // Hidden Number
 }
 
 function romanize(num) {

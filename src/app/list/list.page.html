@@ -20,9 +20,9 @@
 
         <section class="card">
         <div class="row" style="padding:10px;">
-        <div class="col-6" style="font-size: 25px;">
-        <p> DOB Person 1:<input type="date" name="dob1" id="dob1" [(ngModel)]="dt1" (ngModelChange)="handler($event)" style="width: 115%;"/>  </p> 
-        <ul class="list-unstyled first">
+        <div class="col-6" style="font-size: 20px;margin-top: 24px;margin-left: -22px;">
+        <p> DOB Person 1:<input type="date" name="dob1" id="dob1" [(ngModel)]="dt1" (ngModelChange)="handler($event)" style="width: 60%;"/>  </p> 
+        <ul class="list-unstyled first" style="width:96%;margin-left: 20px;">
           <li class='a' id='a' ></li>
           <li class='b' id='b' ></li>
           <li class='c' id='c' ></li>
@@ -32,10 +32,12 @@
           <li class='g' id='g' ></li>
           <li class='h' id='h' ></li>
         </ul>
+
         </div>
-        <div class="col-6" style="font-size: 25px;">
-        <p> DOB Person 2:<input type="date" name="dob2" id="dob2" [(ngModel)]="dt2" (ngModelChange)="handler_dob2($event)" style="width: 115%;" /> </p> 
-            <ul class="list-unstyled second">
+
+        <div class="col-6" style="font-size: 20px;margin-top: 24px;margin-left: 22px;">
+        <p> DOB Person 2:<input type="date" name="dob2" id="dob2" [(ngModel)]="dt2" (ngModelChange)="handler_dob2($event)" style="width: 60%;" /> </p> 
+            <ul class="list-unstyled second" style="width:96%;margin-left: 10px;">
               <li class='a' id='a' ></li>
               <li class='b' id='b' ></li>
               <li class='c' id='c' ></li>
@@ -45,8 +47,83 @@
               <li class='g' id='g' ></li>
               <li class='h' id='h' ></li>
             </ul>
+
         </div>
+
+    <div class="row container">
+      <div class="col-md-6">
+        <form action="" id="step1" style="display: none;">
+          <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+            Destiny Number: 
+          </div>
+           <div class="col-md-6">
+            <input type="text" name="DestinyNumber">
+          </div>
+          </div>
+
+          <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+            Universal Character Number: 
+          </div>
+           <div class="col-md-6">
+             <input type="text" name="ucn">
+          </div>
+          </div>
+          <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+           Personality Strength Number: 
+          </div>
+           <div class="col-md-6">
+            <input type="text" name="psn">
+          </div>
+          </div>
+          <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+           Personality Weakness Number: 
+          </div>
+           <div class="col-md-6">
+            <input type="text" name="pwn">
+          </div>
+          </div>
+          <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+           Whole Life Inborn Strength Number:
+          </div>
+           <div class="col-md-6">
+           <input type="text" name="wlisn">
+          </div>
+          </div>
+          <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+           Whole Life Inborn Challenge Number: 
+          </div>
+           <div class="col-md-6">
+             <input type="text" name="wlicn">
+          </div>
+          </div>
+           <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+           Intuition Number:
+          </div>
+           <div class="col-md-6">
+            <input type="text" name="in">
+          </div>
+          </div>
+           <div class="row" style="margin-top: 10px;">
+          <div class="col-md-6" style="text-align: left;">
+           Hidden Potential Number:
+          </div>
+           <div class="col-md-6">
+             <input type="text" name="hpn">
+          </div>
+          </div>
+</form>
+      </div>
+      
+    </div>
         </div>
+
       </section>
 
         <section id="32table" class="card" style="display: none">
@@ -54,25 +131,72 @@
           <div class="table-responsive"></div>
         </section>
 
-        <section id="hchart" class="card" style="display: none">
+        <div id="schartpic" style="display: none;float: left">
+          <h3>Star Of Knowledge</h3>
+
+          <div class="row" style="margin-bottom: 50px;">
+            <div class="col-md-6"><img src="assets/startof.jpeg" style="width:100%;" class="star_image"></div>
+            <div class="col-md-6">
+                <section   id ="schart" class="card" style="display: none; margin-top: 50px;width:100%">  
+          <div  class="table-responsive"></div>
+        </section>
+      
+            </div>
+          </div>
+        </div>
+         
+      
+
+        <section id="hchart" class="card" style="display: none;width: 50%;margin-top: 50px;">
           <h3>Health Chart</h3>
-          <div class="table-responsive"></div>
+          <div class="table-responsive" style="margin-top: 5px;"></div>
         </section>
 
-        <section id="dchart" class="card" style="display: none">
+        <section class="card" id="hchart1" style="width: 30%;margin-left:573px;margin-top: -345px;">
+          <div class="table-responsive"></div>
+        </section>
+         <div id="hremark" style="display: none;margin-left: 456px;">
+        <h3>Remarks</h3>
+      <textarea rows="2" cols="50"> 
+      </textarea> 
+      </div>
+
+        <section id="dchart" class="card" style="display: none;width: 50%;margin-top: 50px;">
             <h3>Direction Chart</h3>
             <div class="table-responsive"></div>
         </section>
+          <div id="dremark" style="display: none;margin-left: 460px;margin-top: -155px;">
+        <h3>Remarks</h3>
+      <textarea rows="4" cols="50"> 
+      </textarea> 
+      </div>
 
-        <section id="pchart" class="card" style="display: none">
+        <section id="pchart" class="card" style="display: none;width: 50%;margin-top: 50px;">
             <h3>Personal Life</h3>
             <div class="table-responsive"></div>
         </section>
+          <div id="premark" style="display: none;margin-left: 460px;margin-top: -155px;">
+        <h3>Remarks</h3>
+      <textarea rows="4" cols="50"> 
+      </textarea> 
+      </div>
 
-        <section id="exchart" class="card" style="display: none">
+        <section id="exchart" class="card" style="display: none;width: 50%;margin-top: 50px;">
             <h3>Missing or Excessive Codes</h3>
             <div class="table-responsive"></div>
         </section>
+
+        <!-- Life Code Number -->
+         <section id="exchart1" class="card" style="display: none;width: 40%;margin-left: 637px;margin-top: -500px;">
+            <div class="table-responsive"></div>
+        </section>
+        <!-- Life Code Number -->
+
+        <!-- Hidden Number -->
+           <section id="exchart2" class="card" style="display: none;width: 50%;margin-left:576px">
+            <div class="table-responsive"></div>
+        </section>
+        <!-- Hidden Number -->
       </div>
     </div>
   </div>
