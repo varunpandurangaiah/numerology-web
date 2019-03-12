@@ -1,1 +1,1 @@
-web: ionic build && ionic serve
+web: npm run build && npm start
